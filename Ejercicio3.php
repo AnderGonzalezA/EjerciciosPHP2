@@ -15,6 +15,7 @@
 		}
 		$indice++;
 	}*/
+
 	for ($i = 0; $i<sizeof($numerosAleatorios); $i++){
 		if ($i != 0){
 			if ($numerosAleatorios[$i]<$numerosAleatorios[$i-1]){
@@ -25,13 +26,16 @@
 			}
 		}
 	}
+	$suma = 0;
 	for ($i = 0; $i<count($numerosAleatorios); $i++){
+		$suma = $suma + $numerosAleatorios[$i];
 		if ($i == 0){
-			echo("<p style='color:blue;'>" . $numerosAleatorios[$i] . "</p> ");
+			echo("<span style='color:blue;'>" . $numerosAleatorios[$i] . "</span> ");
 		}else if($i == count($numerosAleatorios)-1){
-			echo("<p style='color:green;'>" . $numerosAleatorios[$i] . "</p> ");
+			echo("<span style='color:green;'>" . $numerosAleatorios[$i] . "</span> ");
 		}else{
 			echo($numerosAleatorios[$i] . " ");
 		}
 	}
+	echo("Suma: " . $suma . " Media: " . number_format($suma/20, 2));
 ?>
