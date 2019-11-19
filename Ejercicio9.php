@@ -7,11 +7,12 @@
 				$area = $lado * $lado;
 				return($area);
 			}
+		} catch (Exception $e) {
+			echo $e->getMessage(), "\n";
 		}
 	}
-	$numeros = array(rand(-9,9),rand(-9,9),rand(-1,9),rand(-1,9),rand(-1,9));
+	$numeros = array(-1,1,2,3,4,5,6);
 	for ($i = 0; $i < count($numeros); $i++){
-		//echo($numeros[$i]);
 		echo(calcularArea($numeros[$i]) . "<br>");
 	}
 ?>
