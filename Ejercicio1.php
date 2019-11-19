@@ -11,7 +11,7 @@
 	$factoriales = array();
 	for ($i=0; $i<10; $i++){
 		$factoriales[$i] = 1;
-		for ($j=$i; $j>=1; $j--){
+		for ($j=1; $j<=$i; $j++){
 			$factoriales[$i] = $factoriales[$i] * $j;
 		}
 
