@@ -16,14 +16,12 @@
 		$indice++;
 	}*/
 
-	for ($i = 0; $i<sizeof($numerosAleatorios); $i++){
-		if ($i != 0){
-			if ($numerosAleatorios[$i]<$numerosAleatorios[$i-1]){
-				$ayuda = $numerosAleatorios[$i];
-				$numerosAleatorios[$i] = $numerosAleatorios[$i-1];
-				$numerosAleatorios[$i-1]= $ayuda;
-				$i=0;
-			}
+	for ($i = 1; $i<sizeof($numerosAleatorios); $i++){
+		if ($numerosAleatorios[$i]<$numerosAleatorios[$i-1]){
+			$ayuda = $numerosAleatorios[$i];
+			$numerosAleatorios[$i] = $numerosAleatorios[$i-1];
+			$numerosAleatorios[$i-1]= $ayuda;
+			$i=0;
 		}
 	}
 	$suma = 0;
